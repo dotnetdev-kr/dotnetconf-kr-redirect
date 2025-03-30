@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 이동 중...</title>
+
+    <!-- 5초 후 자동 리다이렉트 (meta 방식) -->
+    <meta http-equiv="refresh" content="0; url=https://dotnetuniverse.net/calendar">
+</head>
+<body>
+    <h1>페이지가 이동됩니다...</h1>
+    <p>자동으로 이동되지 않으면 아래 링크를 클릭하여 즉시 이동할 수 있습니다.</p>
+    
+    <!-- 사용자가 직접 이동할 수 있는 링크 -->
+    <a id="redirectLink" href="https://dotnetuniverse.net/calendar">즉시 이동</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const redirectLink = document.getElementById("redirectLink").href; // <a> 태그의 href 값 가져오기
+            setTimeout(function() {
+                window.location.href = redirectLink;
+            }, 100);
+        });
+    </script>
+</body>
+</html>
